@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import * as AstroFeather from 'astro-feather';
 const { titles } = Astro.props
+export const prerender = true;
 ---
 <Layout>
   <nav class="w-full h-14 md:h-16 bg-transparent backdrop-blur flex justify-between transition ease-in">
