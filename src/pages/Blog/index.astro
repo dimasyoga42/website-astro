@@ -2,8 +2,10 @@
 import '../../style/global.css';
 import Leyout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
+import Blog from '../../components/blog.astro';
 export const prerender = true;
 ---
 <Leyout title="blog">
   <Navbar titles="blog"/>
+  <Blog />
 </Leyout>
