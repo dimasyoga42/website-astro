@@ -1,0 +1,22 @@
+---
+import '../style/global.css';
+import Leyout from '../layouts/Layout.astro';
+import * as AstroFeather from 'astro-feather';
+---
+<Leyout>
+  <section class="w-full h-[50vh] md:h-[50vh] lg:min-h-[100vh] flex justify-items-center items-center flex-warp gap-2">
+    <div class="md:w-[40%] md:h-[35%] lg:flex justify-center hidden items-center">
+     <img src="../../public/images/IMG_20240608_231018.png" alt="profile" class=" ">
+    </div>
+    <div class=" w-full lg:w-[50%]">
+    <small class="font-medium text-gray-400 ml-1">hi evryone, I Am</small>
+    <h1 class="font-bold text-3xl ml-2">DIMAS YOGA</h1>
+    <small class="font-medium text-gray-400 ml-1">Front end developer</small>
+    <p class="font-medium italic ml-1">Dimas Yoga is a front end developer who is dedicated and passionate about developing attractive and responsive user interfaces. With expertise in HTML,CSS,and JavaScript, Dimas has the ability to create stunning and intuitive web experiences for users. With his boundless creativity and deep interest in technology, Dimas is always looking for ways to improve his skills and continue to thrive in the dynamic world of web development</p>
+    <div class="flex gap-2 ml-4">
+      <a><AstroFeather.GithubIcon /></a>
+      <a><AstroFeather.InstagramIcon /></a>
+    </div>
+    </div>
+  </section>
+</Leyout>

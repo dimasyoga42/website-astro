@@ -2,6 +2,7 @@
 const { title } = Astro.props;
 import '../style/global.css';
 export const prerender = true;
+
 ---
 <html lang="en">
 	<head>
@@ -10,6 +11,7 @@ export const prerender = true;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
 	</head>
 	<body class="transition-all">
 		<slot></slot>
