@@ -4,11 +4,11 @@ import Leyout from '../layouts/Layout.astro';
 import * as AstroFeather from 'astro-feather';
 ---
 <Leyout>
-  <section class="w-full h-[50vh] md:h-[50vh] lg:min-h-[100vh] flex justify-items-center items-center flex-warp gap-2">
-    <div class="md:w-[40%] md:h-[35%] lg:flex justify-center hidden items-center">
+  <section class="w-full h-[50vh] md:h-[35vh] lg:min-h-[100vh] flex justify-items-center items-center flex-warp gap-2">
+    <div class="img md:w-[40%] md:h-[35%] lg:flex justify-center hidden items-center opacity-0">
      <img src="../../public/images/IMG_20240608_231018.png" alt="profile" class=" ">
     </div>
-    <div class=" w-full lg:w-[50%]">
+    <div class=" isi w-full lg:w-[50%] opacity-0">
     <small class="font-medium text-gray-400 ml-1">hi evryone, I Am</small>
     <h1 class="font-bold text-3xl ml-2">DIMAS YOGA</h1>
     <small class="font-medium text-gray-400 ml-1">Front end developer</small>
@@ -20,3 +20,30 @@ import * as AstroFeather from 'astro-feather';
     </div>
   </section>
 </Leyout>
+<script>
+  import { gsap } from "gsap";
+  gsap.to(".img", { 
+    x: 100, 
+    duration: 1,
+    onComplete: () => {
+            gsap.to(".img", {
+                duration: 2,
+                opacity: 1,
+                x: 0,
+                ease: 'ease'
+            });
+        }
+  });
+  gsap.to(".isi", { 
+    x: -100, 
+    duration: 1,
+    onComplete: () => {
+            gsap.to(".isi", {
+                duration: 2,
+                opacity: 1,
+                x: 0,
+                ease: 'ease'
+            });
+        }
+  });
+</script>
